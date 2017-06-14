@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {selectUser} from '../actions/index'
+import {selectUserActionMethod} from '../actions/index'
 
 
 class UserList extends Component {
@@ -31,12 +31,18 @@ export default connect // this is the container to reduxify this component
 (
     function( state ) // mapping state to props [ pass state to UserList ]; this is the data the component has
     {
-        return {
-            users: state.users
-        };
+        return  {
+                    users: state.users
+                };
     },
-    function( dispatch ) // mapping dispatch to props [ pass actions to UserList ]; these are the actions the component effects
+    function( dispatch ) // mapping dispatch to props [ pass actions to UserList ]; these are the actions the component has
     {
-        return bindActionCreators( { selectUser: selectUser }, dispatch );
+        return bindActionCreators
+        (
+            {
+                selectUser: selectUserActionMethod
+            },
+            dispatch
+        );
     }
 )( UserList );
