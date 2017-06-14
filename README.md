@@ -9,7 +9,6 @@
 
 ## TODO:
 - learn why this has Sass and why I should learn that too.
-- figure out how to make it work ;p (npm install is breaking)
 
 ----------
 
