@@ -17,4 +17,5 @@
 ```npm install; webpack; npm run start```
 
 (I will keep this here, moved to the end, moreso just to keep terminology fresh)
-<img src="http://i.imgur.com/DUiL9yn.png" width="150px" />
+
+<img src="http://i.imgur.com/DUiL9yn.png" width="500px" />
