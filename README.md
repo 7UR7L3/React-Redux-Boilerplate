@@ -1,33 +1,20 @@
-![](http://i.imgur.com/DUiL9yn.png)
+# Herein I shall play around with React and Redux and theoretically learn something useful.
 
-# React/Sass/Redux Boilerplate
+### Collection of videos that I've used to get a bearing.
+- [Traversy Media -- Useful standalone video that uses sublime.](https://www.youtube.com/watch?v=NCshQ290g38)
+- [thenewboston -- Nice general overview (source of this fork)](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBbSLZjvleMwldX8jGgXV6a)
+- [Kurt Weiberth -- More in depth overview (haven't completed)](https://www.youtube.com/playlist?list=PLQDnxXqV213JJFtDaG0aE9vqvp6Wm7nBg)
 
-Boilerplate and guide for a React/Sass/Redux build.
+----------
 
-## Getting Started
+## TODO:
+- learn why this has Sass and why I should learn that too.
+- figure out how to make it work ;p (npm install is breaking)
 
-To get started, first install all the necessary dependencies.
-```
-> npm install
-```
+----------
 
-Run an initial webpack build
-```
-> webpack
-```
+##### Old README summary:
+```npm install; webpack; npm run start```
 
-Start the development server (changes will now update live in browser)
-```
-> npm run start
-```
-
-To view your project, go to: [http://localhost:3000/](http://localhost:3000/)
-
-## Links
-
-- [Donate](https://www.patreon.com/thenewboston)
-- [thenewboston.com](https://thenewboston.com/)
-- [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
-- [Twitter](https://twitter.com/bucky_roberts)
-- [Google+](https://plus.google.com/+BuckyRoberts)
-- [reddit](https://www.reddit.com/r/thenewboston/)
+(I will keep this here, moved to the end, moreso just to keep terminology fresh)
+<img src="http://i.imgur.com/DUiL9yn.png" width="150px" />
