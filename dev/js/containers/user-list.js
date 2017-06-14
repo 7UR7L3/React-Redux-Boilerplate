@@ -7,42 +7,36 @@ import {selectUser} from '../actions/index'
 class UserList extends Component {
 
     renderList() {
-        return this.props.users.map((user) => {
-            return (
-                <li
-                    key={user.id}
-                    onClick={() => this.props.selectUser(user)}
-                >
-                    {user.first} {user.last}
-                </li>
-            );
+        return this.props.users.map( (user) =>
+        {
+            return( <li
+                        key={user.id}
+                        onClick={() => this.props.selectUser(user)}
+                    >
+                        {user.first} {user.last}
+                    </li> ); /// dank comment to fix sublime's js colouring; 
         });
     }
 
-    render() {
-        return (
-            <ul>
-                {this.renderList()}
-            </ul>
-        );
+    render()
+    { return (
+        <ul>
+            {this.renderList()}
+        </ul>
+    ); }
+
+}
+
+export default connect // this is the container to reduxify this component
+(
+    function( state ) // mapping state to props [ pass state to UserList ]; this is the data the component has
+    {
+        return {
+            users: state.users
+        };
+    },
+    function( dispatch ) // mapping dispatch to props [ pass actions to UserList ]; these are the actions the component effects
+    {
+        return bindActionCreators( { selectUser: selectUser }, dispatch );
     }
-
-}
-
-// Get apps state and pass it as props to UserList
-//      > whenever state changes, the UserList will automatically re-render
-function mapStateToProps(state) {
-    return {
-        users: state.users
-    };
-}
-
-// Get actions and pass them as props to to UserList
-//      > now UserList has this.props.selectUser
-function matchDispatchToProps(dispatch){
-    return bindActionCreators({selectUser: selectUser}, dispatch);
-}
-
-// We don't want to return the plain UserList (component) anymore, we want to return the smart Container
-//      > UserList is now aware of state and actions
-export default connect(mapStateToProps, matchDispatchToProps)(UserList);
+)( UserList );

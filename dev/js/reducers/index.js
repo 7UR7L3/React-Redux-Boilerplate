@@ -12,4 +12,4 @@ const allReducers = combineReducers({
     activeUser: ActiveUserReducer
 });
 
-export default allReducers
+export default allReducers;
