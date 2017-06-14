@@ -10,14 +10,23 @@ import allReducers from './reducers';
 import App from './components/App';
 
 const logger = createLogger();
-const store = createStore(
+const store1 = createStore(
+    allReducers,
+    applyMiddleware(thunk, promise, logger)
+);
+const store2 = createStore(
     allReducers,
     applyMiddleware(thunk, promise, logger)
 );
 
 ReactDOM.render(
-    <Provider store={store}>
+	<div>
+    <Provider store={store1}>
         <App />
-    </Provider>,
+    </Provider>
+    <Provider store={store2}>
+        <App />
+    </Provider>
+    </div>,
     document.getElementById('root')
 );
